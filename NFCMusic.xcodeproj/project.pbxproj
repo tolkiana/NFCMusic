@@ -13,6 +13,10 @@
 		38A665C422E15D9800F35C40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A665C222E15D9800F35C40 /* Main.storyboard */; };
 		38A665C622E15D9900F35C40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A665C522E15D9900F35C40 /* Assets.xcassets */; };
 		38A665C922E15D9900F35C40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A665C722E15D9900F35C40 /* LaunchScreen.storyboard */; };
+		38F03C9722E2A09300D32355 /* NFCWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F03C9622E2A09300D32355 /* NFCWriter.swift */; };
+		38F03C9922E2B2CA00D32355 /* NFCMessageEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F03C9822E2B2CA00D32355 /* NFCMessageEncoder.swift */; };
+		38F03C9B22E2B2ED00D32355 /* NFCReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F03C9A22E2B2ED00D32355 /* NFCReader.swift */; };
+		38F03C9D22E2B37400D32355 /* NFCMessageDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F03C9C22E2B37400D32355 /* NFCMessageDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		38A665C522E15D9900F35C40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38A665C822E15D9900F35C40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38A665CA22E15D9900F35C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38A665D022E15ECC00F35C40 /* NFCMusic.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = NFCMusic.entitlements; sourceTree = "<group>"; };
+		38F03C9622E2A09300D32355 /* NFCWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCWriter.swift; sourceTree = "<group>"; };
+		38F03C9822E2B2CA00D32355 /* NFCMessageEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCMessageEncoder.swift; sourceTree = "<group>"; };
+		38F03C9A22E2B2ED00D32355 /* NFCReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReader.swift; sourceTree = "<group>"; };
+		38F03C9C22E2B37400D32355 /* NFCMessageDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCMessageDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,8 @@
 		38A665BB22E15D9800F35C40 /* NFCMusic */ = {
 			isa = PBXGroup;
 			children = (
+				38F03C9522E2A05A00D32355 /* NFC */,
+				38A665D022E15ECC00F35C40 /* NFCMusic.entitlements */,
 				38A665BC22E15D9800F35C40 /* AppDelegate.swift */,
 				38A665BE22E15D9800F35C40 /* SceneDelegate.swift */,
 				38A665C022E15D9800F35C40 /* ViewController.swift */,
@@ -65,6 +76,17 @@
 				38A665CA22E15D9900F35C40 /* Info.plist */,
 			);
 			path = NFCMusic;
+			sourceTree = "<group>";
+		};
+		38F03C9522E2A05A00D32355 /* NFC */ = {
+			isa = PBXGroup;
+			children = (
+				38F03C9622E2A09300D32355 /* NFCWriter.swift */,
+				38F03C9A22E2B2ED00D32355 /* NFCReader.swift */,
+				38F03C9822E2B2CA00D32355 /* NFCMessageEncoder.swift */,
+				38F03C9C22E2B37400D32355 /* NFCMessageDecoder.swift */,
+			);
+			path = NFC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +160,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F03C9D22E2B37400D32355 /* NFCMessageDecoder.swift in Sources */,
 				38A665C122E15D9800F35C40 /* ViewController.swift in Sources */,
+				38F03C9922E2B2CA00D32355 /* NFCMessageEncoder.swift in Sources */,
+				38F03C9B22E2B2ED00D32355 /* NFCReader.swift in Sources */,
 				38A665BD22E15D9800F35C40 /* AppDelegate.swift in Sources */,
+				38F03C9722E2A09300D32355 /* NFCWriter.swift in Sources */,
 				38A665BF22E15D9800F35C40 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
