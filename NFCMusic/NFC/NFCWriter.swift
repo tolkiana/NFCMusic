@@ -23,6 +23,10 @@ class NFCWriter: NSObject, NFCNDEFReaderSessionDelegate {
         print("The session was invalidated: \(error.localizedDescription)")
     }
     
+    func readerSessionDidBecomeActive(_ session: NFCNDEFReaderSession) {
+        print("Session is Active!");
+    }
+    
     func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
         // This is never called when implementing `readerSession:didDetectTags`
     }
@@ -51,7 +55,7 @@ class NFCWriter: NSObject, NFCNDEFReaderSessionDelegate {
     
     private func beginSession() {
         session = NFCNDEFReaderSession(delegate: self,
-                                       queue: DispatchQueue.main,
+                                       queue: nil,
                                        invalidateAfterFirstRead: true)
         session?.begin()
     }
