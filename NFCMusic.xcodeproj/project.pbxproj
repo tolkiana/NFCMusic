@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3880734E22E4DC1000DF0385 /* DataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3880734D22E4DC1000DF0385 /* DataUtil.swift */; };
 		38A665BD22E15D9800F35C40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A665BC22E15D9800F35C40 /* AppDelegate.swift */; };
 		38A665BF22E15D9800F35C40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A665BE22E15D9800F35C40 /* SceneDelegate.swift */; };
 		38A665C122E15D9800F35C40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A665C022E15D9800F35C40 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3880734D22E4DC1000DF0385 /* DataUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtil.swift; sourceTree = "<group>"; };
 		38A665B922E15D9800F35C40 /* NFCMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFCMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A665BC22E15D9800F35C40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38A665BE22E15D9800F35C40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3880734C22E4DBD700DF0385 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3880734D22E4DC1000DF0385 /* DataUtil.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		38A665B022E15D9800F35C40 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +75,7 @@
 		38A665BB22E15D9800F35C40 /* NFCMusic */ = {
 			isa = PBXGroup;
 			children = (
+				3880734C22E4DBD700DF0385 /* Utilities */,
 				38F03C9522E2A05A00D32355 /* NFC */,
 				38A665D022E15ECC00F35C40 /* NFCMusic.entitlements */,
 				38A665BC22E15D9800F35C40 /* AppDelegate.swift */,
@@ -161,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38F03C9D22E2B37400D32355 /* NFCMessageDecoder.swift in Sources */,
+				3880734E22E4DC1000DF0385 /* DataUtil.swift in Sources */,
 				38A665C122E15D9800F35C40 /* ViewController.swift in Sources */,
 				38F03C9922E2B2CA00D32355 /* NFCMessageEncoder.swift in Sources */,
 				38F03C9B22E2B2ED00D32355 /* NFCReader.swift in Sources */,
