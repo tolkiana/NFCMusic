@@ -15,21 +15,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eX1-tr-PLI">
-                                <rect key="frame" x="174.5" y="409" width="65" height="88"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eX1-tr-PLI">
+                                <rect key="frame" x="107" y="399" width="200" height="108"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXQ-qY-xPK">
-                                        <rect key="frame" x="0.0" y="0.0" width="65" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.34769710300000001" blue="0.33472933770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="6QF-9F-Iy4"/>
                                         </constraints>
-                                        <state key="normal" title="Read Tag"/>
+                                        <state key="normal" title="Read Tag">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="read:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gXt-YZ-81H"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zJ-j1-GQc">
-                                        <rect key="frame" x="0.0" y="44" width="65" height="44"/>
+                                        <rect key="frame" x="0.0" y="64" width="200" height="44"/>
+                                        <color key="backgroundColor" red="0.99215686270000003" green="0.7843137255" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="9i0-Mo-dgW"/>
                                         </constraints>
@@ -39,6 +43,9 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Exf-UU-4HG"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
