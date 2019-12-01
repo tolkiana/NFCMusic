@@ -18,7 +18,7 @@ class NFCMessageEncoder {
     }
     
     func message(with text: String) -> NFCNDEFMessage? {
-        guard let payload = NFCNDEFPayload.wellKnowTypeTextPayload(
+        guard let payload = NFCNDEFPayload.wellKnownTypeURIPayload(
             string: text,
             locale: Locale(identifier: "En")) else {
             return nil
@@ -30,7 +30,7 @@ class NFCMessageEncoder {
         guard let urlPayload = NFCNDEFPayload.wellKnownTypeURIPayload(url: url) else {
             return nil
         }
-        guard let textPayload = NFCNDEFPayload.wellKnowTypeTextPayload(
+        guard let textPayload = NFCNDEFPayload.wellKnownTypeURIPayload(
             string: text,
             locale: Locale(identifier: "En")) else {
             return nil
@@ -57,7 +57,7 @@ class NFCMessageEncoder {
     
     func payloads(from texts: [String]) -> [NFCNDEFPayload] {
         return texts.compactMap { text in
-            return NFCNDEFPayload.wellKnowTypeTextPayload(
+            return NFCNDEFPayload.wellKnownTypeTextPayload(
                 string: text,
                 locale: Locale(identifier: "En")
             )
