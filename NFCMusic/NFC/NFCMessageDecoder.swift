@@ -25,18 +25,18 @@ enum PayloadType: String {
 class NFCMessageDecoder {
     
     func decode(_ message: NFCNDEFMessage) -> [String] {
-        return message.records.compactMap { record in
-            return self.decode(record)
+        return message.records.compactMap { payload in
+            return self.decode(payload)
         }
     }
     
-    private func decode(_ record: NFCNDEFPayload) -> String? {
-        let type = PayloadType(rawValue: record.type.decode())
+    private func decode(_ payload: NFCNDEFPayload) -> String? {
+        let type = PayloadType(rawValue: payload.type.decode())
         switch type {
         case .uri:
-            return record.wellKnownTypeURIPayload()?.absoluteString
+            return payload.wellKnownTypeURIPayload()?.absoluteString
         case .text:
-            return record.wellKnownTypeTextPayload().0
+            return payload.wellKnownTypeTextPayload().0
         default:
             return nil
         }

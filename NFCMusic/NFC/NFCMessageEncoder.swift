@@ -55,7 +55,7 @@ class NFCMessageEncoder {
     
     // MARK: - Private
     
-    func payloads(from texts: [String]) -> [NFCNDEFPayload] {
+    private func payloads(from texts: [String]) -> [NFCNDEFPayload] {
         return texts.compactMap { text in
             return NFCNDEFPayload.wellKnownTypeTextPayload(
                 string: text,
@@ -64,7 +64,7 @@ class NFCMessageEncoder {
         }
     }
     
-    func payloads(from urls: [URL]) -> [NFCNDEFPayload] {
+    private func payloads(from urls: [URL]) -> [NFCNDEFPayload] {
         return urls.compactMap { url in
             return NFCNDEFPayload.wellKnownTypeURIPayload(url: url)
         }

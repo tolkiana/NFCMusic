@@ -12,7 +12,7 @@ class NFCWriter: NSObject, NFCNDEFReaderSessionDelegate {
     private var session: NFCNDEFReaderSession? = nil
     private var message: NFCNDEFMessage? = nil
     
-    func write(_ message: NFCNDEFMessage) {
+    func startSession(with message: NFCNDEFMessage) {
         self.message = message
         beginSession()
     }

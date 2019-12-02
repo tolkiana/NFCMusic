@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func read(_ sender: UIButton) {
-        reader.read { message in
+        reader.startSession { message in
             let song = self.decoder.decode(message)
             print(song)
         }
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         guard let message = encoder.message(with: [url], and: [songName, artist]) else {
             return
         }
-        writer.write(message)
+        writer.startSession(with: message)
     }
 
 }

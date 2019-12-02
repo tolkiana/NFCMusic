@@ -13,7 +13,7 @@ class NFCReader: NSObject, NFCNDEFReaderSessionDelegate {
     private var message: NFCNDEFMessage? = nil
     private var successReading: ((NFCNDEFMessage) -> ())?
     
-    func read(succes: ((NFCNDEFMessage) -> ())?) {
+    func startSession(succes: ((NFCNDEFMessage) -> ())?) {
         beginSession()
         successReading = succes
     }
