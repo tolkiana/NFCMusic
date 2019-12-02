@@ -22,7 +22,10 @@ class ViewController: UIViewController {
     @IBAction func read(_ sender: UIButton) {
         reader.startSession { message in
             let song = self.decoder.decode(message)
+            // Returns an array of Strings containing
+            // the title, artist and URI of the song.
             print(song)
+
         }
     }
     
